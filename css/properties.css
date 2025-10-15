@@ -1,0 +1,141 @@
+:root {
+    --color-primary: #6c63ff;
+    --color-secondary: #666666;
+    --color-text: aliceblue;
+    --color-card-bg: #1F1F1F;
+    --font-primary: 'Urbanist', sans-serif;
+    --color-border-grey: #7c7575;
+
+    --max-width: 1440px;
+    --padding-desktop: 5rem;
+    --padding-tablet: 3.75rem;
+    --padding-mobile: 1.25rem;
+
+    --font-heading-desktop: 2rem;
+    --font-heading-tablet: 1.75rem;
+    --font-heading-mobile: 1.5rem;
+    --font-subtitle: 1rem;
+    --font-card-number: 1.5rem;
+    --font-card-label: 0.875rem;
+}
+
+.search-section {
+    background-color: var(--color-bg);
+    padding: calc(var(--padding-desktop) - 10px) var(--padding-desktop);
+}
+
+.search-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--color-placeholder);
+}
+
+.search-bar input::placeholder {
+    color: var(--color-placeholder);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 1rem 1.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.filter {
+    flex: 1 1 calc(20% - 10px);
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: var(--color-placeholder);
+    min-width: 150px;
+}
+
+.filter i {
+    margin-right: 8px;
+    font-size: 1rem;
+    color: var(--color-placeholder);
+}
+
+.filter select {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--color-placeholder);
+    font-size: 0.95rem;
+    outline: none;
+}
+
+@media (max-width: 1024px) {
+    .search-section {
+        padding: 10px var(--padding-tablet);
+    }
+}
+
+@media (max-width: 768px) {
+    .search-section {
+        padding: 10px var(--padding-mobile);
+    }
+
+    .search-bar {
+        flex-direction: row;
+    }
+
+    .search-bar input {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .search-bar button {
+        width: 2%;
+    }
+
+    .filter-row {
+        flex-direction: column;
+    }
+
+    .filter {
+        flex: 1 1 100%;
+    }
+}

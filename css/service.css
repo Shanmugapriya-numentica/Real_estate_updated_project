@@ -1,0 +1,217 @@
+:root {
+    --color-bg-section: #141414;
+    --color-box-bg: #1A1A1A;
+    --color-border: #262626;
+    --color-text: #ffffff;
+    --color-subtext: #999999;
+    --padding-desktop: 3rem;
+    --max-width: 1200px;
+    --font-primary: 'Inter', sans-serif;
+}
+
+.service-section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--padding-desktop);
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    background-color: var(--color-bg-section);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.service-details-boxes,
+.service-details-boxes-down {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.service-boxes,
+.service-boxes-down-first {
+    flex: 1;
+}
+
+.service-boxes-down-second {
+    flex: 2;
+}
+
+.service-boxes,
+.service-boxes-down-first,
+.service-boxes-down-second {
+    flex: 1;
+    background-color: var(--color-box-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.service-boxes:hover {
+    transform: translateY(-5px);
+}
+
+.service-boxes .up {
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.service-boxes .up img {
+    max-width: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.service-boxes .down p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--color-subtext);
+}
+
+@media (max-width: 768px) {
+    .service-boxes {
+        flex: 1 1 100%;
+    }
+
+    .service-details-boxes-down {
+        flex-direction: column;
+    }
+}
+
+.service-boxes-down-first .down p,
+.service-boxes-down-second .down p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--color-subtext);
+}
+
+.service-boxes .up,
+.service-boxes-down-first .up {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.new-service-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: var(--color-bg-section);
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    padding: var(--padding-desktop);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.service-left-text {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.service-left-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.service-left-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-subtext);
+}
+
+.left-new-box {
+    background-color: var(--color-box-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.left-new-box h3 {
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text);
+    font-size: 1.25rem;
+}
+
+.left-new-box p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--color-subtext);
+    margin-bottom: 1rem;
+}
+
+.learn-more-btn {
+    background-color: #262626;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: start;
+    border-color: #999999;
+}
+
+
+.service-right-boxes {
+    flex: 0 0 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.service-right-boxes .service-boxes {
+    flex: 1 1 calc(50% - 10px);
+    background-color: var(--color-box-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.service-right-boxes .service-boxes:hover {
+    transform: translateY(-5px);
+}
+
+.service-right-boxes .service-boxes .up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.service-right-boxes .service-boxes .up img {
+    max-width: 60px;
+}
+
+.service-right-boxes .service-boxes .down p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--color-subtext);
+}
+
+@media (max-width: 768px) {
+    .new-service-section {
+        flex-direction: column;
+    }
+
+    .service-left-text,
+    .service-right-boxes {
+        flex: 1 1 100%;
+    }
+
+    .service-right-boxes .service-boxes {
+        flex: 1 1 100%;
+    }
+}
