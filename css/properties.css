@@ -1,24 +1,3 @@
-:root {
-    --color-primary: #6c63ff;
-    --color-secondary: #666666;
-    --color-text: aliceblue;
-    --color-card-bg: #1F1F1F;
-    --font-primary: 'Urbanist', sans-serif;
-    --color-border-grey: #7c7575;
-
-    --max-width: 1440px;
-    --padding-desktop: 5rem;
-    --padding-tablet: 3.75rem;
-    --padding-mobile: 1.25rem;
-
-    --font-heading-desktop: 2rem;
-    --font-heading-tablet: 1.75rem;
-    --font-heading-mobile: 1.5rem;
-    --font-subtitle: 1rem;
-    --font-card-number: 1.5rem;
-    --font-card-label: 0.875rem;
-}
-
 .search-section {
     background-color: var(--color-bg);
     padding: calc(var(--padding-desktop) - 10px) var(--padding-desktop);
@@ -90,6 +69,7 @@
     padding: 0.75rem 1rem;
     color: var(--color-placeholder);
     min-width: 150px;
+    position: relative; 
 }
 
 .filter i {
@@ -102,10 +82,34 @@
     flex: 1;
     background: transparent;
     border: none;
-    color: var(--color-placeholder);
+    color: var(--color-text); 
     font-size: 0.95rem;
     outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
 }
+
+.filter::after {
+    content: "\f107";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 1rem;
+    color: var(--color-placeholder);
+    pointer-events: none;
+}
+
+.filter select option {
+    background-color: #1a1a1a;
+    color: var(--color-text);
+}
+
+.filter:hover {
+    border-color: var(--color-primary);
+}
+
 
 @media (max-width: 1024px) {
     .search-section {
