@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Seaside Serenity Villa",
+    "description": "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood...",
+    "image": "assets/Image.png",
+    "bedrooms": 4,
+    "price": 10000,
+    "location": "New York",
+    "type": "Villa",
+    "size": "1500",
+    "buildYear": 2020
+  },
+  {
+    "id": 2,
+    "title": "Metropolitan Haven",
+    "description": "A chic and fully-furnished 2-bedroom apartment with panoramic city views...",
+    "image": "assets/Image (1).png",
+    "bedrooms": 3,
+    "price": 20000,
+    "location": "Los Angeles",
+    "type": "Apartment",
+    "size": "1200",
+    "buildYear": 2015
+  },
+  {
+    "id": 3,
+    "title": "Rustic Retreat Cottage",
+    "description": "An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community...",
+    "image": "assets/Image (2).png",
+    "bedrooms": 3,
+    "price": 32000,
+    "location": "New York",
+    "type": "Villa",
+    "size": "1300",
+    "buildYear": 2020
+  }
+]
